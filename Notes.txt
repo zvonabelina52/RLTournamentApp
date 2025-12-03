@@ -1,0 +1,3 @@
+TODO:
+- show remaining tourneys in the day
+- filter by: mode, team size

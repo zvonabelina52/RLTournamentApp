@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eslint-plugin-react-hooks": "^7.1.0-canary-8ac5f4eb-20251119",
+    "expo": "^54.0.25"
+  }
+}

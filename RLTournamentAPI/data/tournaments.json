@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "verified": "Live game data (Nov 21, 2025)",
+    "region": "EU",
+    "timezone": "Europe/Zagreb",
+    "confidence": "very-high",
+    "updateFrequency": "These tournaments appear consistently every week"
+  },
+
+  "weekTracking": {
+    "currentWeek": "B",
+    "weekRotation": "A or B",
+    "lastUpdate": "2025-11-21",
+    "nextUpdate": "2025-11-25",
+    "notes": "Week A and B alternate. Update every Monday to track rotation."
+  },
+
+  "guaranteedDailyTournaments": [
+    {
+      "time": "13:00",
+      "teamSize": "3v3",
+      "mode": "Pentathlon",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Most reliable tournament - never missed"
+    },
+    {
+      "time": "14:00",
+      "teamSize": "3v3",
+      "mode": "Heatseeker",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Second most reliable"
+    },
+    {
+      "time": "16:00",
+      "teamSize": "3v3",
+      "mode": "Soccar",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Always 3v3 Soccar at 4PM"
+    },
+    {
+      "time": "17:00",
+      "teamSize": "2v2",
+      "mode": "Soccar",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Never changed - 2v2 Soccar at 5PM"
+    },
+    {
+      "time": "19:00",
+      "teamSize": "3v3",
+      "mode": "Soccar",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Prime time - most popular, always 3v3"
+    },
+    {
+      "time": "20:00",
+      "teamSize": "2v2",
+      "mode": "Heatseeker",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Consistent 2v2 Heatseeker at 8PM"
+    },
+    {
+      "time": "21:00",
+      "teamSize": "2v2",
+      "mode": "Soccar",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Consistent late evening slot"
+    },
+    {
+      "time": "23:00",
+      "teamSize": "3v3",
+      "mode": "Soccar",
+      "frequency": "Every Day",
+      "confidence": 100,
+      "notes": "Final tournament of the day - very stable"
+    }
+  ],
+
+  "stableWeekdayPatterns": {
+    "monday": [
+      {
+        "time": "15:00",
+        "teamSize": "3v3",
+        "mode": "varies",
+        "weekA": "Rumble",
+        "weekB": "Snow Day",
+        "notes": "ROTATES: Week A = Rumble, Week B = Snow Day"
+      },
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 90,
+        "notes": "Usually 2v2 Pentathlon at 6PM"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "15:00",
+        "teamSize": "2v2",
+        "mode": "Hoops",
+        "confidence": 100,
+        "notes": "STABLE - Hoops every Tuesday at 3PM"
+      },
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 90,
+        "notes": "Usually 2v2 Pentathlon at 6PM"
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 90,
+        "notes": "Usually 2v2 Pentathlon at 6PM"
+      }
+    ],
+    "thursday": [
+      {
+        "time": "15:00",
+        "teamSize": "3v3",
+        "mode": "varies",
+        "weekA": "Rumble",
+        "weekB": "Dropshot",
+        "notes": "ROTATES: Week A = Rumble, Week B = Dropshot"
+      },
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 90,
+        "notes": "Usually 2v2 Pentathlon at 6PM"
+      }
+    ],
+    "friday": [
+      {
+        "time": "15:00",
+        "teamSize": "3v3",
+        "mode": "Dropshot",
+        "confidence": 100,
+        "notes": "STABLE - Dropshot every Friday at 3PM"
+      },
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "STABLE - 2v2 Pentathlon at 6PM on Fridays"
+      }
+    ]
+  },
+
+  "weekendStablePatterns": {
+    "saturday": [
+      {
+        "time": "12:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "Weekend noon slot"
+      },
+      {
+        "time": "13:00",
+        "teamSize": "2v2",
+        "mode": "Soccar",
+        "confidence": 100,
+        "notes": "Consistent both weeks"
+      },
+      {
+        "time": "14:00",
+        "teamSize": "3v3",
+        "mode": "varies",
+        "weekA": "Heatseeker",
+        "weekB": "Snow Day",
+        "notes": "ROTATES: Week A = Heatseeker, Week B = Snow Day"
+      },
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "Evening weekend slot - stable"
+      },
+      {
+        "time": "22:00",
+        "teamSize": "3v3",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "Late Saturday tournament"
+      }
+    ],
+    "sunday": [
+      {
+        "time": "12:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "Sunday noon"
+      },
+      {
+        "time": "13:00",
+        "teamSize": "2v2",
+        "mode": "Soccar",
+        "confidence": 100,
+        "notes": "Consistent"
+      },
+      {
+        "time": "14:00",
+        "teamSize": "3v3",
+        "mode": "Heatseeker",
+        "confidence": 100,
+        "notes": "Both weeks"
+      },
+      {
+        "time": "15:00",
+        "teamSize": "3v3",
+        "mode": "varies",
+        "weekA": "Dropshot",
+        "weekB": "Rumble",
+        "notes": "ROTATES: Week A = Dropshot, Week B = Rumble"
+      },
+      {
+        "time": "18:00",
+        "teamSize": "2v2",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "Both weeks"
+      },
+      {
+        "time": "22:00",
+        "teamSize": "3v3",
+        "mode": "Pentathlon",
+        "confidence": 100,
+        "notes": "Both weeks"
+      }
+    ]
+  },
+
+  "keyInsights": {
+    "mostReliableTournaments": [
+      "19:00 3v3 Soccar (Every single day)",
+      "23:00 3v3 Soccar (Every single day)",
+      "13:00 3v3 Pentathlon (Every single day)",
+      "14:00 3v3 Heatseeker (Every single day)",
+      "17:00 2v2 Soccar (Every single day)",
+      "16:00 3v3 Soccar (Every single day)",
+      "20:00 2v2 Heatseeker (Every single day)",
+      "21:00 2v2 Soccar (Every single day)"
+    ],
+    "weekendIsMoreStable": "Saturday and Sunday have almost identical schedules both weeks",
+    "weekdayVariability": "Monday-Thursday have rotation at 3PM slot",
+    "specialModePattern": "Hoops (Tuesday 3PM), Dropshot (Friday 3PM) are very stable",
+    "sixPMPattern": "2v2 Pentathlon appears at 6PM on most weekdays"
+  },
+
+  "recommendationsForApp": {
+    "phase1": "Start with the 8 guaranteed daily tournaments (100% confidence)",
+    "phase2": "Add weekend schedule (very stable - 95%+ confidence)",
+    "phase3": "Add Friday Dropshot and Tuesday Hoops (100% confidence special modes)",
+    "phase4": "Implement week tracking to show correct rotating modes",
+    "phase5": "Add 6PM 2v2 Pentathlon for weekdays",
+    "updateStrategy": "Update currentWeek every Monday, verify special mode rotations"
+  }
+}
