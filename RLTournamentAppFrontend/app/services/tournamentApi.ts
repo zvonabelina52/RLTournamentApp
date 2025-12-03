@@ -1,7 +1,3 @@
-// services/tournamentApi.ts
-// Place this in: RLTournamentAppFrontend/app/services/tournamentApi.ts
-
-// Detect platform and environment
 import { Platform } from 'react-native';
 
 // Configuration
@@ -16,7 +12,7 @@ const API_CONFIG = {
     // Find it by running: ipconfig (Windows) or ifconfig (Mac/Linux)
     physical: 'http://192.168.18.147:3000/api', 
   },
-  production: 'https://your-production-api.com/api',
+  production: 'https://rltournamentapi.onrender.com/api',
 };
 
 const getBaseURL = (): string => {
