@@ -20,7 +20,10 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.zvona52.RLTournamentApp"
+      "package": "com.zvona52.RLTournamentApp",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "web": {
       "output": "static",
@@ -50,6 +53,9 @@
       "eas": {
         "projectId": "4a9284f3-c83b-47a4-b9ad-65b7be8c4fd5"
       }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4a9284f3-c83b-47a4-b9ad-65b7be8c4fd5"
     }
   }
 }
