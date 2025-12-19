@@ -62,6 +62,7 @@ export type WeekTracking = {
 };
 
 export type TournamentResponse = {
+  last_updated: any;
   day?: string;
   date?: string;
   tournaments: Tournament[];
