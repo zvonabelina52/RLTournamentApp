@@ -61,19 +61,26 @@ const TournamentScreen: React.FC = () => {
     setLoading(true);
     
     try {
-      // Fetch today's tournaments from the API
+      // Fetch the live data from the scanner-updated endpoint
       const result = await tournamentAPI.getTodayTournaments();
       
       if (result.success && result.data) {
-        setTournaments(result.data.tournaments);
+        // 1. Access the 'tournaments' array from the root of the scanner JSON
+        const tournamentList = result.data.tournaments || [];
+        setTournaments(tournamentList);
         setShowTournaments(true);
         
-        // Store week tracking info if available
-        if (result.data.weekTracking) {
-          setWeekTracking(result.data.weekTracking);
+        // 2. Map the 'last_updated' field to your weekTracking state 
+        // (or create a new state for lastScanTime)
+        if (result.data.last_updated) {
+          setWeekTracking({
+            currentWeek: "Live Scan", // Useful to show it's live data now
+            lastUpdate: result.data.last_updated,
+            nextUpdate: "Next Scan scheduled"
+          });
         }
         
-        console.log(`📊 Loaded ${result.data.count} tournaments for ${result.data.day}`);
+        console.log(`📊 Loaded ${tournamentList.length} tournaments from live scan`);
       } else {
         Alert.alert(
           'Error',

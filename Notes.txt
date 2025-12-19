@@ -1,3 +1,16 @@
 TODO:
 - show remaining tourneys in the day
 - filter by: mode, team size
+
+App data consistency testing:
+- Friday 5.12., says week B, all data good except time size at 13 and 14 for pentathlon and heatseeker - should be 2v2 not 3v3 
+
+- Monday 8.12., says week B, but it should be A since friday was B, all data good except team size at 13 and 14 - should be 2v2 not 3v3, and at 15 the gamemode is rumble not snow day
+
+- Tuesday 9.12. - says week B, but it should be A since friday was B, late check; couldn't see for 13h and 14h, safe to assume they were wrong, 15h 2v2 hoops, should be 3v3 snow day, everything else is good
+
+- Wednesday 10.12., says week B, but it should be A since friday was B, time size at 13 and 14 for pentathlon and heatseeker - should be 2v2 not 3v3, missing tourney at 15h - 2v2 hoops, app had tourneies up until 19h but in the game there is no tourney between 15h and 19h, at 20h heatseeker gamemode correct but teamsize should be 3v3 not 2v2
+
+- Thursday 11.12., says week B, but it should be A since friday was B, 
+
+- Friday 11.12., says week B, but it should be A since friday was B,
