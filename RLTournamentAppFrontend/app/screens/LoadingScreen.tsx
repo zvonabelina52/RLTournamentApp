@@ -2,36 +2,36 @@ import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, View, Image } from 'react-native';
 
 const LoadingScreen: React.FC = () => {
-  const glowAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0.8)).current;
+  const barAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    // Pulsing glow animation
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(glowAnim, {
-          toValue: 1,
-          duration: 1000,
-          useNativeDriver: true,
-        }),
-        Animated.timing(glowAnim, {
-          toValue: 0,
-          duration: 1000,
-          useNativeDriver: true,
-        }),
-      ])
-    ).start();
-
-    // Scale up animation
+    // Scale up animation for logo
     Animated.spring(scaleAnim, {
       toValue: 1,
       tension: 50,
       friction: 7,
       useNativeDriver: true,
     }).start();
-  }, [glowAnim, scaleAnim]);
 
-  const glowOpacity = glowAnim.interpolate({
+    // Loading bar animation
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(barAnim, {
+          toValue: 1,
+          duration: 1000,
+          useNativeDriver: false,
+        }),
+        Animated.timing(barAnim, {
+          toValue: 0,
+          duration: 1000,
+          useNativeDriver: false,
+        }),
+      ])
+    ).start();
+  }, [scaleAnim, barAnim]);
+
+  const barOpacity = barAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0.3, 1],
   });
@@ -44,12 +44,11 @@ const LoadingScreen: React.FC = () => {
         <View style={[styles.gradientCircle2, { backgroundColor: '#ff7f0020' }]} />
       </View>
 
-      {/* Animated Logo with Image */}
+      {/* Animated Logo with Image - NO PULSATING CIRCLE */}
       <Animated.View style={[styles.logoContainer, { transform: [{ scale: scaleAnim }] }]}>
-        <Animated.View style={[styles.glowCircle, { opacity: glowOpacity }]} />
         <View style={styles.logo}>
           <Image
-            source={require('../../assets/images/loading_screen_image.jpg')} // Your image path here
+            source={require('../../assets/images/loading_screen_image.jpg')}
             style={styles.logoImage}
             resizeMode="contain"
           />
@@ -68,7 +67,7 @@ const LoadingScreen: React.FC = () => {
           <Animated.View 
             style={[
               styles.loadingBarFill,
-              { opacity: glowOpacity }
+              { opacity: barOpacity }
             ]} 
           />
         </View>
@@ -113,17 +112,6 @@ const styles = StyleSheet.create({
     marginBottom: 50,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  glowCircle: {
-    position: 'absolute',
-    width: 180,
-    height: 180,
-    borderRadius: 90,
-    backgroundColor: '#0087ff',
-    shadowColor: '#0087ff',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 1,
-    shadowRadius: 40,
   },
   logo: {
     width: 180,
