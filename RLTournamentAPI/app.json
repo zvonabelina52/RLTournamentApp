@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "f47ad2f0-fa0b-436d-b530-a22fd04ea6c7"
+      }
+    },
+    "android": {
+      "package": "com.zvona52.rltournamentapi"
+    }
+  }
+}

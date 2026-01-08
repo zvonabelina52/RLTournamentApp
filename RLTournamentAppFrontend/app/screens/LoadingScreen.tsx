@@ -44,7 +44,7 @@ const LoadingScreen: React.FC = () => {
         <View style={[styles.gradientCircle2, { backgroundColor: '#ff7f0020' }]} />
       </View>
 
-      {/* Animated Logo with Image - NO PULSATING CIRCLE */}
+      {/* Animated Logo with Image */}
       <Animated.View style={[styles.logoContainer, { transform: [{ scale: scaleAnim }] }]}>
         <View style={styles.logo}>
           <Image

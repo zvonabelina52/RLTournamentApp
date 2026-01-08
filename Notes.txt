@@ -4,8 +4,11 @@ APP:
     - add a filter which only shows todays tournaments
     - add a filter which shows tomorrows
 - filter by: mode, team size
-- add saving the redieved data on the backend?
+- add saving the recieved data on the backend?
 - refine the design:
     - loading screen logo background
     - button for getting tournaments
     - redesign tournament page to account for future filter
+
+- add API refresh
+- make the parser abstract

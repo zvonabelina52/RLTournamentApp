@@ -10,7 +10,8 @@ const API_CONFIG = {
     android: 'http://10.0.2.2:3000/api',
     // Replace with your computer's local IP if testing on physical device
     // Find it by running: ipconfig (Windows) or ifconfig (Mac/Linux)
-    physical: 'http://192.168.18.147:3000/api', 
+    physical: 'https://rltournamentapi.onrender.com/api',
+    //physical: 'http://192.168.18.147:3000/api', 
   },
   production: 'https://rltournamentapi.onrender.com/api',
 };

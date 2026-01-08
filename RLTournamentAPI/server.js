@@ -16,36 +16,6 @@ let tournamentData = {
   count: 0
 };
 
-// Helper function to automatically calculate current week based on date
-function getCurrentWeek() {
-  const referenceDate = new Date('2025-11-21');
-  const referenceDateWeek = 'B';
-  
-  const currentDate = new Date();
-  
-  const millisecondsPerWeek = 7 * 24 * 60 * 60 * 1000;
-  const timeDiff = currentDate - referenceDate;
-  const weeksDiff = Math.floor(timeDiff / millisecondsPerWeek);
-  
-  const isEvenWeek = weeksDiff % 2 === 0;
-  const currentWeek = (referenceDateWeek === 'B') 
-    ? (isEvenWeek ? 'B' : 'A')
-    : (isEvenWeek ? 'A' : 'B');
-  
-  const nextMonday = new Date(currentDate);
-  const daysUntilMonday = (8 - nextMonday.getDay()) % 7 || 7;
-  nextMonday.setDate(nextMonday.getDate() + daysUntilMonday);
-  
-  return {
-    currentWeek,
-    lastUpdate: currentDate.toISOString().split('T')[0],
-    nextUpdate: nextMonday.toISOString().split('T')[0],
-    calculatedAutomatically: true,
-    weekNumber: Math.abs(weeksDiff),
-    referenceDate: '2025-11-21'
-  };
-}
-
 // Helper function to calculate time until tournament
 function calculateTimeUntil(tournamentTime, now) {
   const [hours, minutes] = tournamentTime.split(':').map(Number);
@@ -142,8 +112,8 @@ app.get('/api/tournaments/mode/:mode', (req, res) => {
   });
 });
 
-// ==================== UPDATE ENDPOINT ====================
-// This is what your Python scanner calls
+
+// called from Python scanner
 app.post('/api/tournaments/update', (req, res) => {
   try {
     const scannerData = req.body;
@@ -190,10 +160,10 @@ app.use((req, res) => {
       'GET /health',
       'GET /api/tournaments',
       'GET /api/tournaments/today',
-      'GET /api/tournaments/upcoming',
-      'GET /api/tournaments/next',
-      'GET /api/tournaments/mode/:mode',
-      'POST /api/tournaments/update'
+      'GET /api/tournaments/upcoming *not implemented yet',
+      'GET /api/tournaments/next *not implemented yet',
+      'GET /api/tournaments/mode/:mode *not implemented yet',
+      'POST /api/tournaments/update *not implemented yet'
     ]
   });
 });
